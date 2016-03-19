@@ -135,7 +135,7 @@ Have fun !!
 
 --MODULE CODE
 ------------------------------------------------------------------------------- 
-module(..., package.seeall)
+local fsm = {}
 
 -- FSM CONSTANTS --------------------------------------------------------------
 SEPARATOR = '.'
@@ -144,7 +144,7 @@ ANYSTATE  = ANY .. SEPARATOR
 ANYEVENT  = SEPARATOR .. ANY
 UNKNOWN   = ANYSTATE .. ANY
 
-function new(t)
+function fsm.new(t)
 	
 	local self = {}
 	
@@ -226,4 +226,4 @@ function new(t)
 	return self
 end
 
-
+return fsm
